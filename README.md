@@ -7,7 +7,7 @@ inspired by the [original gh workflow](https://github.com/schollz/yoctocore/blob
 
 ## image build
 
-    docker build -t yoctobuild  .
+    docker build -t yoctobuild .
 
 
 ## usage

@@ -16,4 +16,4 @@ RUN sed -i 's/OSAL_TIMEOUT_WAIT_FOREVER/OSAL_TIMEOUT_NORMAL/g' ./pico-sdk/lib/ti
 
 ENV PICO_SDK_PATH=/opt/pico-sdk
 
-workdir /root
+WORKDIR /root
