@@ -16,6 +16,7 @@ run:
 
     docker run -it --rm --name yoctobuild yoctobuild
     git clone --recursive https://github.com/schollz/yoctocore
+    cd yoctocore
 
 build yoctocore:
 
