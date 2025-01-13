@@ -17,6 +17,9 @@ RUN sed -i 's/OSAL_TIMEOUT_WAIT_FOREVER/OSAL_TIMEOUT_NORMAL/g' ./pico-sdk/lib/ti
 RUN apt install -y nodejs npm
 RUN npm install -g luamin
 
+RUN apt install -y golang mkcert
+RUN npm install -g parcel
+
 ENV PICO_SDK_PATH=/opt/pico-sdk
 
 WORKDIR /root
