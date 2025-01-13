@@ -14,13 +14,19 @@ inspired by the [original gh workflow](https://github.com/schollz/yoctocore/blob
 
 run:
 
-    docker run -it --rm --name yoctobuild --platform linux/amd64 yoctobuild
+    docker run -it --rm --name yoctobuild -p 1234:1234 --platform linux/amd64 yoctobuild
     git clone --recursive https://github.com/schollz/yoctocore
     cd yoctocore
 
 build yoctocore:
 
     make yoctocore
+
+build web interface:
+
+    make web
+
+it gets accessible at http://localhost:1234/
 
 
 #### note for Apple ARM / colima
