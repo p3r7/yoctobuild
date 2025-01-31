@@ -50,3 +50,17 @@ this allows me to jump directly in the container w/ TRAMP:
 my typicall launch command is:
 
     docker run -it --rm --platform linux/amd64 -v ~/Documents/code/monome/yoctocore:/root/yoctocore --name yoctobuild yoctobuild
+
+```el
+(defun yoctoflash ()
+  (interactive)
+  (let* ((remote-path "/docker:yoctobuild:/root/yoctocore/yoctocore.uf2")
+         (local-path "/tmp/yoctocore.uf2")
+         (flash-cmd "pv -batep /tmp/yoctocore.uf2 > /media/eigen/RPI-RP2/_core.uf2"))
+    (message "Copying UF2 file...")
+    (copy-file remote-path local-path t)
+    (message "Flashing UF2 file...")
+    (async-shell-command flash-cmd "*yoctobuild-flash*")))
+```
+
+```
