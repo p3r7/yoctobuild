@@ -20,7 +20,7 @@ run:
 
 build yoctocore:
 
-    make yoctocore
+    make yoctocore-release
 
 build web interface:
 
